@@ -17,9 +17,46 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "我是一个标题", // 标题
+      home: Scaffold(      // 主页
+        appBar: AppBar(
+          title: Text("首页"),
+          elevation: 30.0, // 设置标题阴影 不需要的话值设置成0.0
+        ),
+        body: Home(),
+      ),
+      theme: ThemeData( // 设置主体颜色
+        primarySwatch: Colors.yellow
+      ),
+    );
+  }
+}
+
+// Home 组件
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return CustomCenter();    
+  }
+}
+
+// 自定义 Center 组件
+class CustomCenter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     // 返回一个 Center 组件
     return Center(
-      child: Text( 
+      child: CustomText()
+    );
+  }
+}
+
+// 自定义 Text 组件
+class CustomText extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text( 
         "我是 Dart 一个文本内容",
         textDirection: TextDirection.ltr, // ltr = left to right 文本从左往右对齐
         style: TextStyle( // 给 Text 组件增加一些装饰
@@ -27,8 +64,7 @@ class MyApp extends StatelessWidget {
           fontWeight: FontWeight.bold,
           // color: Colors.red
           color: Color.fromRGBO(0, 255, 0, 0.5)
-        )
-    )
+        ),
     );
   }
 }
