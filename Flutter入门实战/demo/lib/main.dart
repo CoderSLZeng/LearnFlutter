@@ -3,10 +3,7 @@
 import 'package:flutter/material.dart'; // 快捷键：f(flutter) + i(import) + m(material) = fim
 
 // dart 的入口方法
-void main() {
-  // flutter 的入口方法
-  runApp(MyApp());
-}
+void main() => runApp(MyApp()); // flutter 的入口方法
 
 /**
  * 自定义组件其实就是一个类
@@ -37,23 +34,101 @@ class MyApp extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CustomCenter();    
+    // return CustomCenter();
+    // return CustomContainer();
+    // return AssetImage();
+    // return networkImage();   
+    // return BorderRadiusImage(); 
+    return ClipOvalImage();
   }
 }
 
-// 自定义 
-
-// 自定义 Center 组件
-class CustomCenter extends StatelessWidget {
+// 本地图片 组件
+class AssetImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // 返回一个 Center 组件
     return Center(
-      child: CustomContainer()
+      child: Container(
+        child: Image.asset("imgs/01.jpeg"),
+        width: 200,
+        height: 200,
+        decoration: BoxDecoration(
+          color: Colors.yellow
+        ),
+      )
     );
   }
 }
 
+// 远程图片 组件
+class networkImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        child: Image.network(
+          "https://pic.rmb.bdstatic.com/c86255e8028696139d3e3e4bb44c047b.png",
+          alignment: Alignment.bottomRight,
+          // color: Colors.blue,
+          // colorBlendMode: BlendMode.screen,
+          // fit: BoxFit.cover,
+          repeat: ImageRepeat.repeat,
+        ),
+        width: 300,
+        height: 800,
+        decoration: BoxDecoration(
+          color: Colors.yellow
+        ),
+        // color: Colors.red,
+      )
+    );
+  }
+}
+
+// 圆角图片 组件
+class BorderRadiusImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        width: 300,
+        height: 300,
+        decoration: BoxDecoration(
+          color: Colors.yellow,
+          // borderRadius: BorderRadius.all(
+          //   Radius.circular(30)
+          // ),
+          borderRadius: BorderRadius.circular(20),
+          image: DecorationImage(
+            image: NetworkImage("https://pic.rmb.bdstatic.com/c86255e8028696139d3e3e4bb44c047b.png")
+          )
+        ),
+
+      )
+    );
+  }
+}
+
+// 圆形图片 组件
+class ClipOvalImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        color: Colors.yellow,
+        child: ClipOval(
+          child: Image.asset("imgs/02.jpeg",
+          width: 200,
+          height: 200,
+          fit: BoxFit.cover
+          )
+        )
+      )
+    );
+  }
+}
+
+// 自定义 Container 组件
 class CustomContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -94,7 +169,7 @@ class CustomContainer extends StatelessWidget {
       // transform: Matrix4.rotationZ(0.3), // Z 轴旋转  
       // transform: Matrix4.diagonal3Values(1.2, 1, 1), // 3D旋转
       alignment: Alignment.bottomLeft // 内容底部左对齐
-    );   
+    );
   }
 }
 
@@ -111,6 +186,18 @@ class CustomText extends StatelessWidget {
           // color: Colors.red
           color: Color.fromRGBO(0, 255, 0, 0.5)
         ),
+    );
+  }
+  
+}
+
+// 自定义 Center 组件
+class CustomCenter extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // 返回一个 Center 组件
+    return Center(
+      child: CustomText()
     );
   }
 }
