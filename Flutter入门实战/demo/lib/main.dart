@@ -6,6 +6,7 @@ import 'containerWidget.dart';
 import 'imageWidget.dart';
 import 'listViewWidget.dart';
 import 'gridViewWidget.dart';
+import 'layoutWidget.dart';
 
 
 // dart 的入口方法
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         body: Home(),
       ),
       theme: ThemeData( // 设置主题颜色
-        primarySwatch: Colors.yellow
+        primarySwatch: Colors.blue
       ),
     );
   }
@@ -52,6 +53,11 @@ class Home extends StatelessWidget {
     // return GridViewWithTextWidget();
     // return GridViewWithTextStyleWidget();
     // return GridViewWithImageTextWidget();
-    return GridViewWithBuilderWidget();
+    // return GridViewWithBuilderWidget();
+    // return PaddingWidget();
+    // return RowWidget();
+    // return ColumnWidget();
+    // return ExpandedWidget();
+    return LayoutDemo();
   }
 }

@@ -61,7 +61,6 @@ class GridViewWithTextStyleWidget extends StatelessWidget {
 }
 
 
-// class GridViewWithImageTextWidget extends StatelessWidget {
 class GridViewWithImageTextWidget extends StatelessWidget {
 
   List<Widget> _getListData() {

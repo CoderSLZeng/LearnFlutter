@@ -12,19 +12,23 @@ class VerticalListViewWidget extends StatelessWidget {
             title: Text("this is title0", style: TextStyle(fontSize: 28.0)),
             subtitle: Text("this is lsubtitle0")
           ),
+
           ListTile(
             title: Text("this is title1"),
             subtitle: Text("this is subtitle1"),
             trailing: Icon(Icons.phone)
           ),
+          
           ListTile(
             title: Text("this is title2"),
             subtitle: Text("this is subtitle2")            
           ),
+          
           ListTile(
             title: Text("this is title3"),
             subtitle: Text("this is subtitle3")
           ),
+          
           ListTile(
             title: Text("this is title4"),
             subtitle: Text("this is subtitle4")
@@ -50,6 +54,7 @@ class HorizontalListViewWidget extends StatelessWidget {
             width: 180.0,
             color: Colors.lightBlue
           ),
+         
           Container(
             width: 180.0,
             color: Colors.amber,
@@ -63,10 +68,12 @@ class HorizontalListViewWidget extends StatelessWidget {
               ]
             )
           ),
+          
           Container(
             width: 180.0,
             color: Colors.deepOrange
           ),
+          
           Container(
             width: 180.0,
             color: Colors.deepPurpleAccent
