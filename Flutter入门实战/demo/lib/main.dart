@@ -7,6 +7,7 @@ import 'imageWidget.dart';
 import 'listViewWidget.dart';
 import 'gridViewWidget.dart';
 import 'layoutWidget.dart';
+import 'stackWidget.dart';
 
 
 // dart 的入口方法
@@ -54,10 +55,17 @@ class Home extends StatelessWidget {
     // return GridViewWithTextStyleWidget();
     // return GridViewWithImageTextWidget();
     // return GridViewWithBuilderWidget();
+
+    
     // return PaddingWidget();
     // return RowWidget();
     // return ColumnWidget();
     // return ExpandedWidget();
-    return LayoutDemo();
+    // return LayoutDemo();
+
+    // use Stack
+    // return StackWidget();
+    // return StackAlignWidget();
+    return StackPositionedWidget();
   }
 }

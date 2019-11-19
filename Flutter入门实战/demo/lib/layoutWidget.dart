@@ -152,66 +152,6 @@ class ExpandedWidget extends StatelessWidget {
   }
 }
 
-/*
-class LayoutDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-
-    return Column(
-      children: <Widget>[
-        Row(
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                height: 180,
-                color: Colors.black,
-                child: Text('data'),
-              )
-            )
-          ]
-        ),
-
-        Row(
-          children: <Widget>[
-            Expanded(
-              flex: 2,
-              child: Container(
-                height: 180,
-                child: Image.network('https://upload-images.jianshu.io/upload_images/8863827-f214cb00231a4784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240', fit: BoxFit.cover)
-              )
-            ),
-            SizedBox(width: 10),
-
-            Expanded(
-              flex: 1,
-              child: ListView(
-                children: <Widget>[
-                  Container(
-                height: 85,
-                child: Image.network('https://upload-images.jianshu.io/upload_images/8863827-6f3e06b72ac3f406.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240', fit: BoxFit.cover),
-              ),
-              SizedBox(height: 10),
-              Container(
-                height: 85,
-                child: Image.network('https://upload-images.jianshu.io/upload_images/8863827-2e006a5894bbab1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240', fit: BoxFit.cover),
-              )
-                ],
-              )
-            )
-          ]
-        )
-      ]
-    );
-    
-  }
-}
-*/
-
-/**
- * https://upload-images.jianshu.io/upload_images/8863827-f214cb00231a4784.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
-https://upload-images.jianshu.io/upload_images/8863827-6f3e06b72ac3f406.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
-https://upload-images.jianshu.io/upload_images/8863827-2e006a5894bbab1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
- */
 
 class LayoutDemo extends StatelessWidget {
   @override
