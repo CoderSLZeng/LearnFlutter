@@ -9,6 +9,7 @@ import 'gridViewWidget.dart';
 import 'layoutWidget.dart';
 import 'stackWidget.dart';
 import 'aspectRatioWidget.dart';
+import 'cardWidget.dart';
 
 
 // dart 的入口方法
@@ -69,6 +70,10 @@ class Home extends StatelessWidget {
     // return StackAlignWidget();
     // return StackPositionedWidget();
     
-    return AspectRatioWidget();
+    // return AspectRatioWidget();
+
+    // use Card
+    // return CardWidget();
+    return CardWithImageTextWidget();
   }
 }
