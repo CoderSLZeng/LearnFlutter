@@ -10,7 +10,8 @@ import 'layoutWidget.dart';
 import 'stackWidget.dart';
 import 'aspectRatioWidget.dart';
 import 'cardWidget.dart';
-import 'raisedButton_WrapWidget.dart'
+import 'raisedButton_WrapWidget.dart';
+import 'package:demo/omePage.dart';
 
 
 // dart 的入口方法
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter Demo'),
           elevation: 30.0, // 设置标题阴影 不需要的话值设置成0.0
         ),
-        body: Home(),
+        body: HomePage(),
       ),
       theme: ThemeData( // 设置主题颜色
         primarySwatch: Colors.blue
@@ -81,3 +82,5 @@ class Home extends StatelessWidget {
     return WrapWidget();
   }
 }
+
+
