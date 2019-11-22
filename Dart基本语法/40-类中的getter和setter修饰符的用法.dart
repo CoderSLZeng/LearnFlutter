@@ -1,10 +1,8 @@
-
-
 // class Rect {
-
+//
 //   int height;
 //   int width;
- 
+//
 //   getArea() {
 //     return this.height * this.width;
 //   } 
@@ -28,45 +26,45 @@
 // }
 
 
-
-
-
-// class Rect{
+// class Rect {
+//
 //   num height;
 //   num width;   
+//
 //   Rect(this.height, this.width);
-//   get area{
+//
+//   get area {
 //     return this.height * this.width;
 //   }
 // }
 
-// void main(){
-//   Rect r = new Rect(10,2);
+// void main() {
+//   Rect r = new Rect(10, 2);
 //   print("面积:${r.area}");      // 注意调用直接通过访问属性的方式访问area
 // }
 
 
 
+class Rect {
 
-
-class Rect{
   num height;
   num width; 
   
   Rect(this.height,this.width);
-  get area{
+
+  get area {
     return this.height*this.width;
   }
-  set areaHeight(value){
+
+  set areaHeight(value) {
     this.height = value;
   }
 }
 
-void main(){
+void main() {
   Rect r = new Rect(10,4);
   // print("面积:${r.area()}");   
   r.areaHeight = 6;
 
   print(r.area);
-
 }

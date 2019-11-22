@@ -8,18 +8,16 @@ async和await
 
 async是让方法变成异步。
 await是等待异步方法执行完成。
-
-
 */
 
-void main() async{
+void main() async {
   var result = await testAsync();
   print(result);
 
 }
 
-//异步方法
-testAsync() async{
+// 异步方法
+testAsync() async {
   return 'Hello async';
 }
 

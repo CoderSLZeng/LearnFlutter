@@ -9,8 +9,8 @@
 */
 
 // 注释2：表示main方法没有返回值
-void main(){
- print('你好dart');
+void main() {
+ print('Hello Dart');
 }
 
 /// 注释3

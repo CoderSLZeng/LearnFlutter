@@ -14,6 +14,7 @@ abstract class B {
 class C implements A, B {  
   @override
   String name;  
+
   @override
   printA() {
     print('printA');
@@ -21,7 +22,6 @@ class C implements A, B {
 
   @override
   printB() {
-    // TODO: implement printB
     return null;
   }
 
@@ -30,9 +30,6 @@ class C implements A, B {
 
 
 void main(){
-
   C c = new C();
   c.printA();
-
-
 }

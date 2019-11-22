@@ -10,16 +10,13 @@ void main(){
   // s.add('香蕉');
   // s.add('苹果');
   // s.add('苹果');
-
-  // print(s);   //{香蕉, 苹果}
-
-  // print(s.toList()); 
+  // print(s);   // {香蕉, 苹果}
+  // print(s.toList()); // [苹果, 香蕉]
 
 
   List myList = ['香蕉', '苹果', '西瓜', '香蕉', '苹果', '香蕉', '苹果'];
-
   var s = new Set();
-  s.addAll(myList);
-  print(s);
-  print(s.toList());  
+  s.addAll(myList); 
+  print(s); // { 香蕉，西瓜，苹果}
+  print(s.toList());  // [苹果, 香蕉, 西瓜]
 }

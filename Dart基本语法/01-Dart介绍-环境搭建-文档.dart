@@ -32,7 +32,7 @@ Dart环境搭建：
 
 Dart 开发工具：
 
-    Dart的开发工具有很多： IntelliJ IDEA  、 WebStorm、 Atom、Vscode等
+    Dart的开发工具有很多： IntelliJ IDEA、 WebStorm、 Atom、VSCode等
 
     这里我们主要给大家讲解的是如果在Vscode中配置Dart。
     

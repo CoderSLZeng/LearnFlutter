@@ -1,68 +1,59 @@
-void main(){
+void main() {
 
-/* 需求：使用forEach打印下面List里面的数据 */
+  // 需求：使用forEach打印下面List里面的数据
+  // List list = ['苹果', '香蕉', '西瓜'];
+  // list.forEach((value){
+  //   print(value);
+  // });
+  
+  // 箭头函数
+  // list.forEach((value) => {
+  //   print(value)
+  // });
 
-    // List list = ['苹果', '香蕉', '西瓜'];
-
-    // list.forEach((value){
-    //   print(value);
-    // });
-
-    // list.forEach((value) => print(value));
-
-
-    // list.forEach((value) => {
-    //   print(value)
-    // });
-
+  // 简单写法
+  // list.forEach((value) => print(value));
 
 
 
-/*需求：修改下面List里面的数据，让数组中大于2的值乘以2*/
 
-    List list = [4, 1, 2, 3, 4];
+  // 需求：修改下面List里面的数据，让数组中大于2的值乘以2
+  // List list = [4, 1, 2, 3, 4];
+  // var newList = list.map((value) {
 
-    // var newList = list.map((value){
+  //   if (value > 2) {
+  //     return value * 2;
+  //   }
+  //   return value;
 
-    //     if(value > 2){
-    //       return value * 2;
-    //     }
-    //     return value;
+  // });
+  // print(newList.toList());
 
-    // });
-    // print(newList.toList());
-
-
-  //  var newList = list.map((value) => value > 2 ? value * 2 : value);
-
-  //  print(newList.toList());
+  // var newList2 = list.map((value) => value > 2 ? value * 2 : value);
+  // print(newList2.toList());
 
 
 
-/**
- * 需求：
- * 1、定义一个方法isEvenNumber来判断一个数是否是偶数
- * 2、定义一个方法打印1-n以内的所有偶数
- */
+  /**
+   * 需求：
+   * 1、定义一个方法isEvenNumber来判断一个数是否是偶数
+   * 2、定义一个方法打印1-n以内的所有偶数
+   */
+  // 定义一个方法isEvenNumber来判断一个数是否是偶数  
+  bool isEvenNumber(int n) {
+    if (n % 2 == 0) {
+      return true;
+    }
+    return false;
+  }
 
-
-// 定义一个方法isEvenNumber来判断一个数是否是偶数  
-    bool isEvenNumber(int n) {
-      if(n % 2 == 0){
-        return true;
+  printNum(int n) {
+    for (var i = 1; i <= n; i++) {
+      if (isEvenNumber(i)) {
+        print(i);
       }
-      return false;
     }
+  }
 
-    printNum(int n){
-        for(var i = 1; i <= n; i++) {
-            if(isEvenNumber(i)){
-              print(i);
-            }
-        }
-    }
-
-    printNum(10);
-
-
+  printNum(10);
 }

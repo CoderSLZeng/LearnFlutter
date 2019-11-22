@@ -1,7 +1,5 @@
 import 'Db.dart';
-
-
-class Mysql implements Db{
+class Mysql implements Db {
   
   @override
   String uri;
@@ -10,7 +8,7 @@ class Mysql implements Db{
 
   @override
   add(data) {   
-    print('这是mysql的add方法'+data);
+    print('这是mysql的add方法' + data);
   }
 
   @override
@@ -22,6 +20,4 @@ class Mysql implements Db{
   save() {   
     return null;
   }
-
-  
 }

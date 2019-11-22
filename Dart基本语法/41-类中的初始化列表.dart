@@ -5,17 +5,16 @@ class Rect{
   int height;
   int width;
   
-  Rect(): height = 2, width = 10{
+  Rect(): height = 2, width = 10 {
     print("${this.height}---${this.width}");
   }
 
-  getArea(){
-    return this.height*this.width;
+  getArea() {
+    return this.height * this.width;
   } 
 }
 
-void main(){
+void main() {
   Rect r = new Rect();
-  print(r.getArea()); 
-   
+  print(r.getArea());
 }

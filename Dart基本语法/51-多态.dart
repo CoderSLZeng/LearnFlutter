@@ -1,38 +1,38 @@
 /*
 Datr中的多态：
-    允许将子类类型的指针赋值给父类类型的指针, 同一个函数调用会有不同的执行效果 。
+  允许将子类类型的指针赋值给父类类型的指针, 同一个函数调用会有不同的执行效果 。
 
-    子类的实例赋值给父类的引用。
-    
-    多态就是父类定义一个方法不去实现，让继承他的子类去实现，每个子类有不同的表现。
+  子类的实例赋值给父类的引用。
+  
+  多态就是父类定义一个方法不去实现，让继承他的子类去实现，每个子类有不同的表现。
 
 */
 
 
-abstract class Animal{
+abstract class Animal {
   eat();   // 抽象方法 
 }
 
-class Dog extends Animal{
+class Dog extends Animal {
   @override
   eat() {
      print('小狗在吃骨头');
   }
   run(){
-    print('run');
+    print('小狗在跑');
   }
 }
-class Cat extends Animal{
+class Cat extends Animal {
   @override
   eat() {   
-    print('小猫在吃老鼠');
+    print('小猫在吃鱼');
   }
   run(){
-    print('run');
+    print('小猫在跑');
   }
 }
 
-main(){
+main() {
 
   // Dog d = new Dog();
   // d.eat();
@@ -42,16 +42,10 @@ main(){
   // Cat c = new Cat();
   // c.eat();
 
-
-
-
-  Animal d = new Dog();
-
-  d.eat();
+  Animal a1 = new Dog();
+  a1.eat(); // 小狗在跑
 
  
-
-  Animal c = new Cat();
-
-  c.eat();
+  Animal a2 = new Cat();
+  a2.eat(); // 小猫在跑
 }

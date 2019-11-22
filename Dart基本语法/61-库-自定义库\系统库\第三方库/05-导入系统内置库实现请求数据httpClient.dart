@@ -8,7 +8,7 @@ void main() async {
 
 
 // API接口： http://news-at.zhihu.com/api/3/stories/latest
-getDataFromZhihuAPI() async{
+getDataFromZhihuAPI() async {
   // 1、创建HttpClient对象
   var httpClient = new HttpClient();  
   // 2、创建Uri对象
